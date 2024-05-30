@@ -33,17 +33,19 @@ const Role = enum {
 // Please add a new property to this struct called "health" and make
 // it a u8 integer type.
 const Character = struct {
-    role: Role,
-    gold: u32,
     experience: u32,
+    gold: u32,
+    health: u8,
+    role: Role,
 };
 
 pub fn main() void {
     // Please initialize Glorp with 100 health.
     var glorp_the_wise = Character{
-        .role = Role.wizard,
-        .gold = 20,
         .experience = 10,
+        .gold = 20,
+        .health = 100,
+        .role = Role.wizard,
     };
 
     // Glorp gains some gold.
